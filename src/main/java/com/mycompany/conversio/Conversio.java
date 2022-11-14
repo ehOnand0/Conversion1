@@ -17,9 +17,9 @@ public class Conversio {
         Scanner sc = new Scanner(System.in);
         
         System.out.println("Introdueix en €");
-        int valor_lliures = sc.nextInt();
+        int valor_euros = sc.nextInt();
                 
         double tipus_de_canvi = 0.87d;
-        System.out.println(valor_lliures + " Lliures (£) 5 equivalen a: " + (valor_lliures * tipus_de_canvi) + " eur0s (€)");
+        System.out.println(valor_euros + " eur0s (€) equivalen a: " + (valor_euros * tipus_de_canvi) + " lliures esterlines (£)");
     }
 }
