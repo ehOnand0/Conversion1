@@ -5,6 +5,7 @@
 
 package com.mycompany.conversio;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
@@ -15,11 +16,26 @@ public class Conversio {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        double exchange1 = 0.88d;
+        double exchange2 = 1.14d;
+        DecimalFormat df = new DecimalFormat("#.##");
         
-        System.out.println("Introdueix en €");
-        int valor_euros = sc.nextInt();
+        System.out.println("Choose a conversion, type 1 for € to £ , type 2 for £ to € ");
+        
+        int conv_type = sc.nextInt();
+        
+        if (conv_type == 1) {
+            System.out.println("Type the amount of € : ");
+            int eur = sc.nextInt();
+            System.out.println(eur + " eur0s (€) equals : " + (eur * exchange1) + " british pounds (£)");
+        } else if (conv_type == 2) {
+            System.out.println("Type the amount of £ : ");
+            int pou = sc.nextInt();
+            
+            System.out.println(pou + " british pounds (£) equals : " +  (df.format  (pou * exchange2)) + " eur0s (€)");
+        }
                 
-        double tipus_de_canvi = 0.87d;
-        System.out.println(valor_euros + " eur0s (€) equivalen a: " + (valor_euros * tipus_de_canvi) + " lliures esterlines (£)");
+        
+        
     }
 }
